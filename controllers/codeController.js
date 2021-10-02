@@ -3,22 +3,20 @@
 var validator = require('validator');
 var num = Math.floor(Math.random() * (9999 - 1000)) + 1000;
 var numString = num.toString();
-var guessString= "";
 var controller = {
     breaker: (req, res) => {
-        console.log(num);
-        console.log(numString)
         var guess = req.params.guess;
-        var result = "";
-        guessString = guess.toString();
+        let result = "";
+        var guessString = guess.toString();
         for (let i = 0; i < guessString.length; i++) {
             for (let j = 0; j < numString.length; j++) {
                 if (guessString[i] == numString[j]) {
                     if (i === j) {
-                        result += "X"
+                        result = result + "X";
                     } else {
-                        result += "-"
+                        result = result + "-";
                     }
+                    i++;
                 }
             }
         }
