@@ -22,7 +22,10 @@ var controller = {
                 }
             }
         }
-     
+        if (result === "XXXX"){
+            num = Math.floor(Math.random() * (9999 - 1000)) + 1000;
+            numString = num.toString();
+        }
         return res.status(200).send({
             num: numString,
             result: result,
