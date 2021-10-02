@@ -1,14 +1,12 @@
 'use strict'
 
 var validator = require('validator');
-
+var num = Math.floor(Math.random() * (9999 - 1000)) + 1000;
+var numString = num.toString();
 var controller = {
     breaker: (req, res) => {
-        var num = Math.floor(Math.random() * (9999 - 1000)) + 1000;
         var guess = req.params.guess;
-
         var result = "";
-        var numString = num.toString();
         var guessString = guess.toString();
         for (let i = 0; i < guessString.length; i++) {
             for (let j = 0; j < numString.length; j++) {
