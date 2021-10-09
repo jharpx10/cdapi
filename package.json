@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose --coverage",
-    "dev": "node index.js"
+    "dev": "node index.js",
+    "start": "node index.js"
+  },"engines": {
+    "node": "14.16.1",
+    "npm": "7.10.0"
   },
   "author": "",
   "license": "ISC",

@@ -1,7 +1,7 @@
 'use strict'
 
 var app = require('./app');
-var port = 4200;
+var port = process.env.PORT || 5000;;
 
 //Crear servidor y ponerme a escuchar peticiones http
 app.listen(port, ()=>{
